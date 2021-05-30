@@ -15,14 +15,14 @@ public class Simulation {
     private Long id;
     @Column(name= "simulationName")
     private String simulationName;
-    @Column(name= "populationSize")
-    private Long populationSize;
-    @Column(name= "initialPopulationSize")
-    private Long initialPopulationSize;
+    @Column(name= "totalPopulationSize")
+    private Integer totalPopulationSize;
+    @Column(name= "initialInfectedPopulationSize")
+    private Integer initialInfectedPopulationSize;
     @Column(name= "markerR")
     private Double markerR;
     @Column(name= "deadRate")
-    private Double deadRate;
+    private Integer deadRate;
     @Column(name= "recoveryTime")
     private Integer recoveryTime;
     @Column(name= "daysFromInfectionUntilDead")

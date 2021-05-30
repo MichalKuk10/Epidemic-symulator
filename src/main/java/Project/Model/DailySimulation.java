@@ -1,5 +1,6 @@
 package Project.Model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Table(name="dailySimulation")
 public class DailySimulation {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name= "id")
     private Long id;
@@ -21,6 +22,10 @@ public class DailySimulation {
     private Integer death;
     @Column(name= "recoveryPopulation")
     private Integer recoveryPopulation;
+    @Column(name = "simulationName")
+    private String simulationName;
 
 
+    public DailySimulation() {
+    }
 }
